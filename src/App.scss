@@ -1,0 +1,198 @@
+.App {
+  background-color: #0f1932;
+  min-height: 100vh;
+  position: relative;
+  .line-straight {
+    position: absolute;
+    width: calc(100vw / 6);
+    height: 100vh;
+    display: inline-block;
+    border-right: 0.5px solid rgb(35, 36, 36);
+    // transform: rotateZ(90deg);
+  }
+  .line-1 {
+    left: 0;
+  }
+  .line-2 {
+    left: calc(100vw / 6);
+  }
+  .line-3 {
+    left: calc(100vw / 3);
+  }
+  .line-4 {
+    left: calc(100vw / 2);
+  }
+  .line-5 {
+    left: calc(200vw / 3);
+  }
+  .line-1 {
+    left: 0;
+  }
+
+  header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu {
+      width: 50vw;
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        li {
+          a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            &:hover {
+              color: palevioletred;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    padding: 0 10em;
+    top: 60px;
+    text-align: center;
+    .banner {
+      padding: 5rem 0;
+      color: white;
+      text-align: center;
+      .title {
+        margin: auto;
+        font-size: 2.2rem;
+        width: 50vw;
+      }
+      .content {
+        margin: auto;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        width: 35vw;
+        color: #97afd5;
+        // margin-bottom: 20px;
+      }
+
+      .btns {
+        width: 350px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        button {
+          display: inline-block;
+          width: 150px;
+          height: 60px;
+          cursor: pointer;
+          border-radius: 30px;
+          border: 3px solid #f42f54;
+          background-color: #f42f54;
+          transition: 0.4s;
+        }
+        .btn-left {
+          color: white;
+          &:hover {
+            background-color: white;
+            color: #f42f54;
+          }
+        }
+        .btn-right {
+          background-color: transparent;
+          color: white;
+
+          &:hover {
+            background-color: #f42f54;
+            color: white;
+          }
+        }
+      }
+
+      .status {
+        width: 100%;
+        margin-top: 5rem;
+        .label{
+          color: #97afd5;
+        }
+        .chart{
+          .project-phase{
+            color:#97afd5;
+            font-size:  11px;
+          }
+          .item-4{
+            text-align: center;
+            font-size: 11px;
+            color: #97afd5;
+            &::after{
+              position: absolute;
+              bottom: 100%;
+              left: 50%;
+              margin-left: -1px;
+              content: '';
+              width: 2px;
+              height: 30px;
+              background: rgba(193, 206, 241, 0.5);
+            }
+          }
+          .item-6-start{
+            text-align: left;
+          }
+          .item-6-end{
+            text-align: right;
+          }
+          .line-horizon {
+            height: 5px;
+            width: 100%;
+            background-color: #f42f54;
+  
+            &::after {
+              position: absolute;
+              content: "";
+              top: 50%;
+              right: 0;
+              height: 18px;
+              width: 18px;
+              border-radius: 50%;
+              border: 2px solid #fff;
+              background: #f42f54;
+              transform: translate(50%, -50%);
+            }
+          }
+        }
+      }
+      .end{
+        margin-top: 5rem;
+        .actions{
+          display: flex;
+          align-items: center;
+          color: #97afd5;
+          transition: 0.4s;
+          &:hover{
+            color: white;
+          }
+        }
+        .icons{
+          display: inline-flex;
+          transition: 0.4s;
+          color: #97afd5;
+          font-size: 16px;
+          width: 36px;
+          height: 36px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          &:hover{
+            background-color: white;
+            color: #f42f54;
+          }
+        }
+      }
+    }
+  }
+}
